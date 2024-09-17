@@ -60,6 +60,12 @@ class _AnalogmclockState extends State<Analogmclock> {
     super.initState();
   }
 
+  @override
+  void dispose() {
+    _timer?.cancel(); // Cancel the timer when the widget is disposed
+    super.dispose();
+  }
+
   // Method to update the clock time
   void updateClock() {
     final now = DateTime.now();
