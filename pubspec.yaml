@@ -1,5 +1,5 @@
 name: analog_mclock
-description: "A analog clock package."
+description: "A Flutter package for creating a customizable analog clock widget. Perfect for adding a classic timepiece look to your Flutter applications."
 version: 0.0.4
 homepage: https://github.com/mari431/analog_mclock_package.git
 
