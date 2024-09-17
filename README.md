@@ -27,45 +27,7 @@ flutter pub get
 
 Here’s a simple example of how to use the AnalogClock widget:
 
-import 'package:flutter/material.dart';
-import 'package:analog_clock/analog_clock.dart'; // Import the package
-
-void main() {
-runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-@override
-Widget build(BuildContext context) {
-return MaterialApp(
-home: Scaffold(
-appBar: AppBar(
-title: Text('Analog Clock Example'),
-),
-body: Center(
-child: AnalogClock(
-circleWidth: 200,
-circleHeight: 200,
-oneToTwelveNumberColor: Colors.black,
-hourHandColor: Colors.blue,
-minuteHandColor: Colors.green,
-secondHandColor: Colors.red,
-backgroundColor: Colors.white,
-circleBorderWidth: 4,
-secondsDotsColor: Colors.grey,
-centerCircleWidth: 10,
-centerCircleHeight: 10,
-centerCircleColor: Colors.black,
-clockNameFontSize: 20,
-clockNameColor: Colors.black,
-clockName: 'My Clock',
-clockNamePositionTop: 20,
-),
-),
-),
-);
-}
-}
+<script src="https://gist.github.com/mari431/60f27968f4dcf08a99b58308c8c5cfc2.js"></script>
 
 ## Customization
 
