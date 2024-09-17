@@ -3,23 +3,24 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+@immutable
 class Analogmclock extends StatefulWidget {
-  double? circleWidth = 300.0;
-  double? circleHeight = 300.0;
-  Color? oneTOTwelveNumberColor = Colors.black;
-  Color? hourHandColor = Colors.black;
-  Color? minuteHandColor = Colors.black;
-  Color? secondHandColor = Colors.black;
-  Color? backgroundColor = Colors.white;
-  double circleBorderWidth = 3.0;
-  Color? secondsDotsColor = Colors.black;
-  double centerCircleWidth = 10.0;
-  double centerCircleHeight = 10.0;
-  Color? centerCircleColor = Colors.black;
-  double? clockNameFontSize = 25.0;
-  Color? clockNameColor = Colors.black;
-  String? clockName = 'Mari';
-  double? clockNamePositionTop = 210.0;
+  final double circleWidth;
+  final double circleHeight;
+  final Color oneTOTwelveNumberColor;
+  final Color hourHandColor;
+  final Color minuteHandColor;
+  final Color secondHandColor;
+  final Color backgroundColor;
+  final double circleBorderWidth;
+  final Color secondsDotsColor;
+  final double centerCircleWidth;
+  final double centerCircleHeight;
+  final Color centerCircleColor;
+  final double clockNameFontSize;
+  final Color clockNameColor;
+  final String clockName;
+  final double clockNamePositionTop;
 
   Analogmclock(
       {super.key,
@@ -29,6 +30,7 @@ class Analogmclock extends StatefulWidget {
         required this.hourHandColor,
         required this.minuteHandColor,
         required this.secondHandColor,
+        required this.backgroundColor,
         required this.circleBorderWidth,
         required this.secondsDotsColor,
         required this.centerCircleWidth,
@@ -37,7 +39,8 @@ class Analogmclock extends StatefulWidget {
         required this.clockNameFontSize,
         required this.clockNameColor,
         required this.clockName,
-        required this.clockNamePositionTop});
+        required this.clockNamePositionTop
+      });
 
   @override
   State<Analogmclock> createState() => _AnalogmclockState();
