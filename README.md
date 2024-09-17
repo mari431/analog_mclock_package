@@ -27,7 +27,7 @@ flutter pub get
 
 Here’s a simple example of how to use the AnalogClock widget:
 
-<script src="https://gist.github.com/mari431/60f27968f4dcf08a99b58308c8c5cfc2.js"></script>
+https://gist.github.com/mari431/cb7aaace21292f8bc8af105922b87fc3
 
 ## Customization
 
