@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 class Analogmclock extends StatefulWidget {
   double circleWidth = 300.0;
@@ -55,7 +54,7 @@ class _AnalogmclockState extends State<Analogmclock> {
   @override
   void initState() {
     updateClock();
-    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       updateClock();
     });
     super.initState();
