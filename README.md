@@ -23,7 +23,7 @@ Then run:
 
 flutter pub get
 
-## Usage
+## Example
 
 Here’s a simple example of how to use the AnalogClock widget:
 
