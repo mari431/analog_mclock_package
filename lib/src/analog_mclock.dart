@@ -4,8 +4,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class Analogmclock extends StatefulWidget {
-  double circleWidth = 300.0;
-  double circleHeight = 300.0;
+  double? circleWidth = 300.0;
+  double? circleHeight = 300.0;
   Color? oneTOTwelveNumberColor = Colors.black;
   Color? hourHandColor = Colors.black;
   Color? minuteHandColor = Colors.black;
