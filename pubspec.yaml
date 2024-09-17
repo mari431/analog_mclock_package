@@ -1,7 +1,7 @@
 name: analog_mclock
-description: "A analog clock Flutter project."
+description: "A analog clock package."
 version: 0.0.1
-homepage:
+homepage: https://github.com/mari431/analog_mclock_package.git
 
 environment:
   sdk: '>=3.4.4 <4.0.0'
