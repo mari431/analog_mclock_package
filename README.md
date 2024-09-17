@@ -15,8 +15,11 @@ Easy integration and use in any Flutter app.
 Add analog_clock to your pubspec.yaml file:
 
 dependencies:
+
 flutter:
+
 sdk: flutter
+
 analog_clock: ^1.0.0 # Replace with the latest version
 
 Then run:
@@ -28,6 +31,8 @@ flutter pub get
 Here’s a simple example of how to use the AnalogClock widget:
 
 https://gist.github.com/mari431/cb7aaace21292f8bc8af105922b87fc3
+
+
 
 ## Customization
 
@@ -49,6 +54,18 @@ The AnalogClock widget allows various customizations:
 * clockNameColor: Color of the clock name.
 * clockName: Text to display as the clock's name.
 * clockNamePositionTop: Vertical position of the clock name.
+* widthofhourHand1: Width of the hour hand1.
+* heightofhourHand1: Height of the hour hand1.
+* widthofhourHand2: Width of the hour hand2.
+* heightofhourHand2: Height of the hour hand2.
+* widthofMinutesHand1: Width of the minute hand1.
+* heightofMinutesHand1: Height of the minute hand1.
+* widthofMinutesHand2: Width of the minute hand2.
+* heightofMinutesHand2: Height of the minute hand2.
+* widthofSecondHand1: Width of the second hand1.
+* heightofSecondHand1: Height of the second hand1.
+* widthofSecondHand2: Width of the second hand2.
+* heightofSecondHand2: Height of the second hand2.
 
 ## Contributing
 

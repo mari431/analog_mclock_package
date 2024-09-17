@@ -21,6 +21,18 @@ class Analogmclock extends StatefulWidget {
   final Color clockNameColor;
   final String clockName;
   final double clockNamePositionTop;
+  final double widthofhourHand1;
+  final double heightofhourHand1;
+  final double widthofhourHand2;
+  final double heightofhourHand2;
+  final double widthofMinutesHand1;
+  final double heightofMinutesHand1;
+  final double widthofMinutesHand2;
+  final double heightofMinutesHand2;
+  final double widthofSecondHand1;
+  final double heightofSecondHand1;
+  final double widthofSecondHand2;
+  final double heightofSecondHand2;
 
   Analogmclock(
       {super.key,
@@ -39,8 +51,19 @@ class Analogmclock extends StatefulWidget {
         required this.clockNameFontSize,
         required this.clockNameColor,
         required this.clockName,
-        required this.clockNamePositionTop
-      });
+        required this.clockNamePositionTop,
+        required this.widthofhourHand1,
+        required this.heightofhourHand1,
+        required this.widthofhourHand2,
+        required this.heightofhourHand2,
+        required this.widthofMinutesHand1,
+        required this.heightofMinutesHand1,
+        required this.widthofMinutesHand2,
+        required this.heightofMinutesHand2,
+        required this.widthofSecondHand1,
+        required this.heightofSecondHand1,
+        required this.widthofSecondHand2,
+        required this.heightofSecondHand2});
 
   @override
   State<Analogmclock> createState() => _AnalogmclockState();
@@ -57,7 +80,7 @@ class _AnalogmclockState extends State<Analogmclock> {
   @override
   void initState() {
     updateClock();
-    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
       updateClock();
     });
     super.initState();
@@ -76,6 +99,7 @@ class _AnalogmclockState extends State<Analogmclock> {
       hours = now.hour;
       minutes = now.minute;
       seconds = now.second;
+      // print('${now.hour}:${now.minute}:${now.second}');
     });
   }
 
@@ -89,7 +113,7 @@ class _AnalogmclockState extends State<Analogmclock> {
           color: widget.backgroundColor,
           shape: BoxShape.circle,
           border: Border.all(width: widget.circleBorderWidth),
-          ),
+        ),
         child: Stack(
           alignment: Alignment.center,
           children: [
@@ -129,16 +153,16 @@ class _AnalogmclockState extends State<Analogmclock> {
             Transform.rotate(
               angle: (hours % 12) * pi / 6 + (minutes) * pi / 360,
               child: Container(
-                width: 6,
+                width: widget.widthofhourHand1,
                 // Width of the hour hand
-                height: 90,
+                height: widget.heightofhourHand1,
                 // Height of the hour hand (shorter)
                 alignment: Alignment.topCenter,
                 // Align the hand from the center
                 child: Container(
-                  width: 6,
+                  width: widget.widthofhourHand2,
                   // Same width as the hour hand
-                  height: 60,
+                  height: widget.heightofhourHand2,
                   // Shorter to keep only one side visible (length of the hand)
                   color: widget.hourHandColor, // Color for the hour hand
                 ),
@@ -159,12 +183,12 @@ class _AnalogmclockState extends State<Analogmclock> {
             Transform.rotate(
               angle: minutes * pi / 30, // Rotation based on minutes
               child: Container(
-                width: 4, // Width of the minute hand
-                height: 150, // Total height, adjust as needed
+                width: widget.widthofMinutesHand1, // Width of the minute hand
+                height: widget.heightofMinutesHand1, // Total height, adjust as needed
                 alignment: Alignment.topCenter, // Align from the center outward
                 child: Container(
-                  width: 4, // Same width as the minute hand
-                  height: 90, // Length of the visible part of the minute hand
+                  width: widget.widthofMinutesHand2, // Same width as the minute hand
+                  height: widget.heightofMinutesHand2, // Length of the visible part of the minute hand
                   color: widget.minuteHandColor, // Color for the minute hand
                 ),
               ),
@@ -174,19 +198,20 @@ class _AnalogmclockState extends State<Analogmclock> {
             Transform.rotate(
               angle: seconds * pi / 30, // Rotation based on seconds
               child: Container(
-                width: 2,
+                width: widget.widthofSecondHand1,
                 // Width of the second hand
-                height: 255,
+                height: widget.heightofSecondHand1,
                 // Total height (adjust as needed for the length)
                 alignment: Alignment.topCenter,
                 // Align the hand from the center outward
                 child: Container(
-                  width: 2, // Same width as the second hand
-                  height: 140, // Length of the visible part of the second hand
+                  width: widget.widthofSecondHand2, // Same width as the second hand
+                  height: widget.heightofSecondHand2, // Length of the visible part of the second hand
                   color: widget.secondHandColor, // Color for the second hand
                 ),
               ),
             ),
+
             // Center point
             Container(
               width: widget.centerCircleWidth,
