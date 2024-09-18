@@ -20,7 +20,7 @@ flutter:
 
 sdk: flutter
 
-analog_clock: ^1.0.0 # Replace with the latest version
+analog_mclock: ^1.0.0 # Replace with the latest version
 
 Then run:
 
